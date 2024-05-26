@@ -14,8 +14,7 @@ void main(List<String> args) {
 //PROCESO
   print("cuantos alumnos?");
   cantAlumnos = int.parse(stdin.readLineSync()!);
-  while (contador < cantAlumnos);
-  {
+  while (contador < cantAlumnos){
     print("cual es su genero y edad");
     genero = stdin.readLineSync()!;
     edad = int.parse(stdin.readLineSync()!);
