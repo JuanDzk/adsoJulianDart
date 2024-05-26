@@ -1,4 +1,3 @@
-
 import 'dart:io';
 
 void main(List<String> args) {
@@ -10,40 +9,52 @@ tiene estudios de primaria, secundaria, carrera técnica, estudios profesionales
 posgrado.
 El programa debe preguntar si se desea continuar ingresando datos.*/
 
+  String? opcion;
+  int estudio,
+      primaria = 0,
+      secundaria = 0,
+      tecnico = 0,
+      profesional = 0,
+      posgrado = 0;
+//PROCESO ENTRADA
+  do {
+    print("cual fue su ultimo estudio");
+    print("1. primaria");
+    print("2. secundaria");
+    print("3. tecnico");
+    print("4. profesionales");
+    print("5. posgrado");
+    print("elija una opcion");
+    estudio = int.parse(stdin.readLineSync()!);
+    switch (estudio) {
+      case 1:
+        primaria++;
+        break;
+      case 2:
+        secundaria++;
+        break;
+      case 3:
+        tecnico++;
+        break;
+      case 4:
+        profesional++;
+        break;
+      case 5:
+        posgrado++;
+        break;
+      default:
+        print("incorrecto");
+        break;
+    }
 
-String?   opcion;
-int estudio, primaria=0, secundaria=0, tecnico=0, profesional=0, posgrado=0; 
+    print("desea meter los datos de otra persona? (si) - (no)");
+    opcion = stdin.readLineSync();
+  } while (opcion!.toLowerCase() != "no");
 
-do{
-print("cual fue su ultimo estudio");
-print("1. primaria");
-print("2. secundaria");
-print("3. tecnico");
-print("4. profesionales");
-print("5. posgrado");
-print("elija una opcion");
-estudio=int.parse(stdin.readLineSync()!);
-switch(estudio){
-  case 1:
-  primaria++;
-  case 2:
-  secundaria++;
-  case 3:
-  tecnico++;
-  case 4:
-  profesional++;
-  case 5:
-  posgrado++;
-}
-
-print("desea meter los datos de otra persona? (si) - (no)");
-opcion=stdin.readLineSync();
-}while(opcion!.toLowerCase() != "no");
-
-print("hay un $primaria% de personas que son primaria");
-print("hay un $secundaria% de personas que son secundaria");
-print("hay un $tecnico% de personas que son tecnico");
-print("hay un $profesional% de personas que son profesional");
-print("hay un $posgrado% de personas que son posgrado");
-
+//SALIDA
+  print("hay un $primaria% de personas que son primaria");
+  print("hay un $secundaria% de personas que son secundaria");
+  print("hay un $tecnico% de personas que son tecnico");
+  print("hay un $profesional% de personas que son profesional");
+  print("hay un $posgrado% de personas que son posgrado");
 }
