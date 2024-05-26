@@ -24,13 +24,13 @@ artículos,  hasta  que  decide  que  ya  tomo  todo  lo  que  necesitaba.  Ayú
     print("Ingrese el precio de $articulo");
     precio = double.parse(stdin.readLineSync()!);
     totalarticulo = cantArticulo * precio;
-    print("el total en el articulo $articulo sera $totalarticulo");
+    print("el total en el articulo $articulo será $totalarticulo");
     totalcompra += totalarticulo;
     contadorArticulo++;
     acumArticulos += cantArticulo;
-    print("Hasta el momento lleva $contadorArticulo Items de articulos");
+    print("Hasta el momento lleva $contadorArticulo del articulos");
     print("La cantidad de articulos en total va en: $acumArticulos");
-    print("Desea ingresar otro articulo (si) - (No)");
+    print("Desea ingresar otro articulo (Si) - (No)");
     opcion = stdin.readLineSync();
     print('*' * 50);
   } while (opcion!.toUpperCase() != "NO");

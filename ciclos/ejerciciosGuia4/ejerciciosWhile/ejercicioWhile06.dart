@@ -3,7 +3,7 @@ import 'dart:io';
 void main(List<String> args) {
   //JUAN DIEGO CALVO OSORIO
 
-  /*determinar cuantos hombres y mujeres se encuentran en un grupo de n personas, suponiendo que los datos son estraidos alguno por alumno*/
+  /*calcular el promedio de edades de hombres, mujeres y de todo un grupode n alumnos*/
 
   double promedio, promedioHombres, promedioMujeres;
   int cantAlumnos, contadorHombres=0, contadorMujeres=0;
@@ -12,7 +12,7 @@ void main(List<String> args) {
   String? genero;
 
 //PROCESO
-  print("cual es la capacidad de alumnos?");
+  print("cuantos alumnos?");
   cantAlumnos = int.parse(stdin.readLineSync()!);
   while (contador < cantAlumnos);
   {
