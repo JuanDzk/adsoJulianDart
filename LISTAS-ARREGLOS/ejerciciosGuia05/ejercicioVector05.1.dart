@@ -11,6 +11,7 @@ vector o el mensaje “NO” si no lo encuentra.*/
   List<double> list = [];
   int cantNum = 5, numBuscar, posicion=0;
   double num;
+  bool encontrado=false;
 //ciclo para llenar vector
   for (var i = 0; i < cantNum; i++) {
     print("digite el numero #${i + 1}");
@@ -24,9 +25,11 @@ vector o el mensaje “NO” si no lo encuentra.*/
   for (var i = 0; i < list.length; i++) {
     if (list[i]==numBuscar){
       posicion=i;
+      encontrado=true;
+      break; //romper el ciclo y salir la primera vez que lo encuentre
     }
   }
-    if (posicion != -1) {
+    if (encontrado==true) {
       print("el numero $numBuscar se ha encontrado en la posiscion: $posicion");
     }else{
       print("NO, NO SE ENCUENTRA");

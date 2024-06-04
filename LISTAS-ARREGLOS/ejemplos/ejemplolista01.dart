@@ -1,6 +1,6 @@
 void main(List<String> args) {
   //denificion y asignacion de lista vacia
-  List<int> numeros1=[];
+  //List<int> numeros1=[];
   //definicion/asignacion lista con elementos
   List<int> pesos= [60,40,30,20,23,33,61];
   List<String>frutas= ["manzana", "pera", "mora", "mango"];
