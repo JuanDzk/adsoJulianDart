@@ -18,5 +18,6 @@ e imprimir el vector resultante.*/
   for (var i = list.length - 1; i >= 0; i -= 1) {
     listOrder.add(list[i]);
   }
+  print("la lista normal es: ${list}");
   print("la lista inversa es: ${listOrder}");
 }
