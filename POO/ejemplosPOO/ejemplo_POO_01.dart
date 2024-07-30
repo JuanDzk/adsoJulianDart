@@ -63,4 +63,11 @@ void main(List<String> args){
   perro3.ladrar();
   perro3.mostrarInformacion();
 
+
+  /* NOTA: void Perro ()
+  1. void = tipo de dato de retorno.
+  2. correr = nombre del metodo. el metodo es una accion o comportamiento del objeto
+  3.parametro que se reciben en el metodo.
+  */
+
 }
