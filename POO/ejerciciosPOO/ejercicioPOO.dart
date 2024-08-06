@@ -1,4 +1,3 @@
-
 import 'dart:io';
 
 import 'Empleado.dart';
@@ -33,39 +32,44 @@ void main(List<String> args) {
 // se añade a la lista
     listaEmpleados.add(objEmpleado);
   }
-
-// ejecutar los metodos
-
-
-for (var i = 0; i < listaEmpleados.length; i++) {
-  print("EL EMPLEADO ${i+1}");
-
-
-  //METODO MOSTRAR INFORMACION
-  listaEmpleados[i].mostrarInformacion();
-
-
-  //METODO AUMENTO DE SALARIO
-  print("porcentaje de salario aumentado");
-  double newAumento = double.parse(stdin.readLineSync()!);
-  double newSalario = listaEmpleados[i].aumentarSalario(newAumento);
-  print("el nuevo salario aumentado es: $newSalario");
-  
-  //METODO CUMPLIR AÑOS
-  int newEdad = listaEmpleados[i].cumplirAnios();
-  print("feliz cumpleaños numero: $newEdad");
-
-  //METODO CAMBIAR PUESTO
-  print("el empleado  cambia de puesto, digite su nuevo puesto");
-  String puestoNew= stdin.readLineSync()!;
-  String newPuesto = listaEmpleados[i].cambiarPuesto(puestoNew);
-  print("el nuevo puesto es: $newPuesto");
-
-  //METODO PARA BONIFICACION
-  double newBonificacion = listaEmpleados[i].calcularBonificacion();
-  print("la bonificacion del salario: $newSalario es: $newBonificacion");
-
-  //METODO MOSTRAR INFO
-  listaEmpleados[i].mostrarInformacion();
+//llama al metodo y ejecuta
+mostrarListaEmpleado(listaEmpleados);
+ 
 }
+
+
+
+
+
+void mostrarListaEmpleado(List<Empleado> listaEmpleados){
+// ejecutar los metodos
+ for (var i = 0; i < listaEmpleados.length; i++) {
+    print("EL EMPLEADO ${i + 1}");
+
+    //METODO MOSTRAR INFORMACION
+    listaEmpleados[i].mostrarInformacion();
+
+    //METODO AUMENTO DE SALARIO
+    print("porcentaje de salario aumentado");
+    double newAumento = double.parse(stdin.readLineSync()!);
+    double newSalario = listaEmpleados[i].aumentarSalario(newAumento);
+    print("el nuevo salario aumentado es: $newSalario");
+
+    //METODO CUMPLIR AÑOS
+    int newEdad = listaEmpleados[i].cumplirAnios();
+    print("feliz cumpleaños numero: $newEdad");
+
+    //METODO CAMBIAR PUESTO
+    print("el empleado  cambia de puesto, digite su nuevo puesto");
+    String puestoNew = stdin.readLineSync()!;
+    String newPuesto = listaEmpleados[i].cambiarPuesto(puestoNew);
+    print("el nuevo puesto es: $newPuesto");
+
+    //METODO PARA BONIFICACION
+    double newBonificacion = listaEmpleados[i].calcularBonificacion();
+    print("la bonificacion del salario: $newSalario es: $newBonificacion");
+
+    //METODO MOSTRAR INFO
+    listaEmpleados[i].mostrarInformacion();
+  }
 }
