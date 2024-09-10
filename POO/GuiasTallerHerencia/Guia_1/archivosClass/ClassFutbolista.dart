@@ -1,11 +1,11 @@
 import 'ClassPersona.dart';
 
-class futbolista extends Persona{
+class Futbolista extends Persona{
   String _equipo;
   String _posicion;
   int cantidadGoles;
 
-  futbolista(String nombre, int edad, this._equipo,this._posicion,this.cantidadGoles) : super(edad,nombre);
+  Futbolista(String nombre, int edad, this._equipo,this._posicion,this.cantidadGoles) : super(edad,nombre);
 
   void setEquipo(String equipo){
     this._equipo = equipo;
@@ -35,11 +35,10 @@ class futbolista extends Persona{
   bool Titular;
   if (cantidadGoles > 5) {
     Titular = true;
-    print("El jugador es titular");
   } else {
     Titular = false;
-    print("El jugador es banca");
   }
+  Titular ? "SI" : "NO";
   return Titular;
 }
 

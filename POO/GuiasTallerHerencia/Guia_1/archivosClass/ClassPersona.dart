@@ -1,4 +1,4 @@
-abstract class Persona {
+class Persona {
   String  _nombre;
   int _edad;
 
